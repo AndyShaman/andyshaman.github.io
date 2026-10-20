@@ -11,9 +11,12 @@
 <meta property="og:title" content="Add to NotebookLM: free YouTube &amp; Web Importer for NotebookLM">
 <meta property="og:description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No quotas of its own, no account, open source.">
 <meta property="og:url" content="https://andyshaman.github.io/add-to-notebooklm/">
-<meta property="og:image" content="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png">
+<meta property="og:image" content="https://andyshaman.github.io/add-to-notebooklm/img/og-marquee.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="560">
 <meta property="og:site_name" content="AndyShaman">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://andyshaman.github.io/add-to-notebooklm/img/og-marquee.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,6 +27,8 @@
   "softwareRequirements": "Google Chrome or a Chromium-based browser",
   "softwareVersion": "1.3.1",
   "url": "https://andyshaman.github.io/add-to-notebooklm/",
+  "image": "https://andyshaman.github.io/add-to-notebooklm/img/og-marquee.jpg",
+  "screenshot": "https://andyshaman.github.io/add-to-notebooklm/img/screenshot-1.webp",
   "installUrl": "https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope",
   "description": "Free Chrome extension that adds web pages, YouTube videos, playlists, channels and comments to NotebookLM (Gemini Notebook) as sources, with bulk import and bulk delete. The extension sets no quotas of its own (NotebookLM's own source limits still apply), needs no account and is open source.",
   "license": "https://opensource.org/licenses/MIT",
@@ -88,6 +93,16 @@
   th { background: var(--soft); }
   .table-wrap { overflow-x: auto; }
   code { background: var(--soft); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+  img { max-width: 100%; height: auto; }
+  figure { margin: 1.4em 0; }
+  figure img { display: block; border: 1px solid var(--border); border-radius: 8px; }
+  figcaption { margin-top: 0.4em; font-size: 0.92rem; color: var(--muted); }
+  .install a, .badges a { display: inline-block; vertical-align: middle; margin-right: 8px; }
+  .install img, .badges img { display: block; }
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.4em 0; }
+  .shots figure { margin: 0; }
+  @media (max-width: 640px) { .shots { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
   footer { margin-top: 48px; padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--border); font-size: 0.92rem; color: var(--muted); }
 </style>
 </head>
@@ -101,8 +116,14 @@
 
 <p>Add to NotebookLM is a Chrome extension that adds web pages and YouTube content (videos, playlists, channels and comments) to your Google Notebook (NotebookLM / Gemini Notebook) in one click, and lets you manage sources in bulk. It is free, with no premium tier, no account and no ads. The extension sets no quotas of its own; only NotebookLM's own limits on sources per notebook apply.</p>
 
-<p><a class="cta" href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Install from Chrome Web Store</a></p>
+<p class="install"><a class="cta" href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Install from Chrome Web Store</a> <a href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope"><img src="img/chrome-web-store-badge.png" alt="Available in the Chrome Web Store" width="170" height="48"></a></p>
+<p class="badges"><a href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope"><img src="https://img.shields.io/chrome-web-store/users/pdkgjccfmjghjelcogecndopngnjhope?label=users&amp;color=4285F4" alt="Number of Chrome Web Store users" height="20"></a> <a href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope"><img src="https://img.shields.io/chrome-web-store/rating/pdkgjccfmjghjelcogecndopngnjhope?label=rating&amp;color=4285F4" alt="Chrome Web Store rating" height="20"></a></p>
 <p class="muted">Open source under the MIT license.</p>
+
+<figure>
+  <img src="img/screenshot-1.webp" alt="The extension popup on a Wikipedia page, with the notebook picker set to AI Research and the Add to Notebook, Add as PDF and Create New Notebook buttons" width="1280" height="800" loading="eager">
+  <figcaption>The popup on a web page: pick a notebook and add the page in one click.</figcaption>
+</figure>
 
 <h2 id="what-it-does">What it does</h2>
 <ul>
@@ -114,6 +135,10 @@
   <li>Bulk delete of sources inside a notebook.</li>
   <li>Multiple Google accounts, English and Russian interface, dark theme.</li>
 </ul>
+<figure>
+  <img src="img/screenshot-5.webp" alt="A grid of eight features: bulk import of URL lists, YouTube playlists and channels, YouTube comments as a source, import all open tabs, grab every link from a page, RSS and Atom feed import, full-page PDF snapshot, bulk delete of sources" width="1280" height="800" loading="lazy">
+  <figcaption>All the main tools in one extension.</figcaption>
+</figure>
 
 <h2 id="why">Why people pick it</h2>
 <p>Every feature is free and there are no daily quotas. Importing YouTube playlists and channels, which some other importers offer only as a paid feature, is included at no cost. The extension can also turn the comments under a YouTube video into a notebook source, so you can ask NotebookLM what thousands of viewers said.</p>
@@ -126,6 +151,10 @@
   <li>YouTube comments as a source.</li>
   <li>Page-to-PDF capture for sites that import poorly as plain links.</li>
 </ul>
+<figure>
+  <a href="https://www.youtube.com/watch?v=Ji76i2_szG4"><img src="img/demo-thumb.jpg" alt="Thumbnail of the Add to NotebookLM demo video on YouTube" width="480" height="360" loading="lazy"></a>
+  <figcaption><a href="https://www.youtube.com/watch?v=Ji76i2_szG4">Watch the demo on YouTube</a></figcaption>
+</figure>
 
 <h2 id="import-youtube-playlist">How to import a YouTube playlist into NotebookLM</h2>
 <ol>
@@ -136,6 +165,10 @@
   <li>Click <strong>Add Playlist to Notebook</strong>. Each video in the playlist is added to the notebook as a separate source.</li>
 </ol>
 <p>Channels work the same way: open the channel page on YouTube and click <strong>Add Channel Videos to Notebook</strong>.</p>
+<figure>
+  <img src="img/screenshot-3.webp" alt="The extension popup on a YouTube video page, with the Add Video to Notebook, Add as PDF and Parse Comments buttons" width="1280" height="800" loading="lazy">
+  <figcaption>On YouTube the popup shows YouTube actions, including Parse Comments.</figcaption>
+</figure>
 
 <h2 id="import-youtube-comments">How to import YouTube comments into NotebookLM</h2>
 <ol>
@@ -154,6 +187,16 @@
   <li>Select the notebook.</li>
   <li>Click <strong>Import Links</strong> or <strong>Import Selected Tabs</strong>. Each link is added as a separate source.</li>
 </ol>
+<div class="shots">
+  <figure>
+    <img src="img/screenshot-2.webp" alt="The Bulk Import panel with an RSS feed URL, the Load from RSS button, a list of ten links and the Import Links button" width="1280" height="800" loading="lazy">
+    <figcaption>Paste a list of links or load them from an RSS feed.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/screenshot-4.webp" alt="The Select Browser Tabs list with three of four open tabs checked and the Import Selected Tabs button" width="1280" height="800" loading="lazy">
+    <figcaption>Pick open browser tabs to import.</figcaption>
+  </figure>
+</div>
 
 <h2 id="comparison">Comparison with other NotebookLM importers</h2>
 <p>Several Chrome extensions import content into NotebookLM. Some charge for playlist and channel import, and some cap how many imports you can make per day; check each listing, since their terms change. Add to NotebookLM keeps all features free, sets no daily quotas, needs no account of its own, and adds YouTube comments import and page-to-PDF capture.</p>
