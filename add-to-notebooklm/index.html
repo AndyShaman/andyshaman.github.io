@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Add to NotebookLM: free YouTube &amp; Web Importer for NotebookLM (Chrome extension)</title>
-<meta name="description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No limits, no account, open source.">
+<meta name="description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No quotas of its own, no account, open source.">
 <link rel="canonical" href="https://andyshaman.github.io/add-to-notebooklm/">
 <link rel="icon" href="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Add to NotebookLM: free YouTube &amp; Web Importer for NotebookLM">
-<meta property="og:description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No limits, no account, open source.">
+<meta property="og:description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No quotas of its own, no account, open source.">
 <meta property="og:url" content="https://andyshaman.github.io/add-to-notebooklm/">
 <meta property="og:image" content="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png">
 <meta property="og:site_name" content="AndyShaman">
@@ -20,11 +20,12 @@
   "@type": "SoftwareApplication",
   "name": "Add to NotebookLM: YouTube & Web Importer",
   "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Chrome",
+  "operatingSystem": "Windows, macOS, Linux, ChromeOS",
+  "softwareRequirements": "Google Chrome or a Chromium-based browser",
   "softwareVersion": "1.3.1",
   "url": "https://andyshaman.github.io/add-to-notebooklm/",
-  "downloadUrl": "https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope",
-  "description": "Free Chrome extension that adds web pages, YouTube videos, playlists, channels and comments to NotebookLM (Gemini Notebook) as sources, with bulk import and bulk delete. No limits, no account, open source.",
+  "installUrl": "https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope",
+  "description": "Free Chrome extension that adds web pages, YouTube videos, playlists, channels and comments to NotebookLM (Gemini Notebook) as sources, with bulk import and bulk delete. The extension sets no quotas of its own (NotebookLM's own source limits still apply), needs no account and is open source.",
   "license": "https://opensource.org/licenses/MIT",
   "author": {"@type": "Person", "name": "AndyShaman", "url": "https://github.com/AndyShaman"},
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
@@ -48,7 +49,7 @@
     {"@type": "Question", "name": "Is it open source?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes. The source code is on GitHub at github.com/AndyShaman/add_to_NotebookLM under the MIT license."}},
     {"@type": "Question", "name": "Does it send my data anywhere?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Only to your own Google Notebook. There are no third-party servers, no analytics and no telemetry."}}
+     "acceptedAnswer": {"@type": "Answer", "text": "Imported content goes only to your own Google Notebook. The extension also reads the YouTube pages you import from and the list of Google accounts signed in to the browser, as the privacy policy describes. There are no third-party servers, no analytics and no telemetry."}}
   ]
 }
 </script>
@@ -98,7 +99,7 @@
   <h1>Add to NotebookLM: YouTube &amp; Web Importer</h1>
 </header>
 
-<p>Add to NotebookLM is a Chrome extension that adds web pages and YouTube content (videos, playlists, channels and comments) to your Google Notebook (NotebookLM / Gemini Notebook) in one click, and lets you manage sources in bulk. It is free, with no limits, no premium tier, no account and no ads.</p>
+<p>Add to NotebookLM is a Chrome extension that adds web pages and YouTube content (videos, playlists, channels and comments) to your Google Notebook (NotebookLM / Gemini Notebook) in one click, and lets you manage sources in bulk. It is free, with no premium tier, no account and no ads. The extension sets no quotas of its own; only NotebookLM's own limits on sources per notebook apply.</p>
 
 <p><a class="cta" href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Install from Chrome Web Store</a></p>
 <p class="muted">Open source under the MIT license.</p>
@@ -117,7 +118,7 @@
 <h2 id="why">Why people pick it</h2>
 <p>Every feature is free and there are no daily quotas. Importing YouTube playlists and channels, which some other importers offer only as a paid feature, is included at no cost. The extension can also turn the comments under a YouTube video into a notebook source, so you can ask NotebookLM what thousands of viewers said.</p>
 <ul>
-  <li>Unlimited imports, no daily quotas.</li>
+  <li>No daily quotas of its own.</li>
   <li>YouTube playlists and channels, free.</li>
   <li>Import all open browser tabs, free.</li>
   <li>Grab every link from any page in one click, free.</li>
@@ -155,7 +156,7 @@
 </ol>
 
 <h2 id="comparison">Comparison with other NotebookLM importers</h2>
-<p>Several Chrome extensions import content into NotebookLM. Some charge for playlist and channel import, and some cap how many imports you can make per day. Add to NotebookLM keeps all features free, sets no daily quotas, needs no account of its own, and adds YouTube comments import and page-to-PDF capture.</p>
+<p>Several Chrome extensions import content into NotebookLM. Some charge for playlist and channel import, and some cap how many imports you can make per day; check each listing, since their terms change. Add to NotebookLM keeps all features free, sets no daily quotas, needs no account of its own, and adds YouTube comments import and page-to-PDF capture.</p>
 <div class="table-wrap">
 <table>
   <thead>
@@ -199,7 +200,7 @@
 <h3>Is it open source?</h3>
 <p>Yes. The source code is on <a href="https://github.com/AndyShaman/add_to_NotebookLM">GitHub</a> under the MIT license.</p>
 <h3>Does it send my data anywhere?</h3>
-<p>Only to your own Google Notebook. There are no third-party servers, no analytics and no telemetry.</p>
+<p>Imported content goes only to your own Google Notebook. The extension also reads the YouTube pages you import from and the list of Google accounts signed in to the browser, as the privacy policy describes. There are no third-party servers, no analytics and no telemetry.</p>
 
 <h2 id="ru" lang="ru">Русский</h2>
 <div lang="ru">
