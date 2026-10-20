@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add to NotebookLM: free YouTube &amp; Web Importer for NotebookLM (Chrome extension)</title>
+<meta name="description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No limits, no account, open source.">
+<link rel="canonical" href="https://andyshaman.github.io/add-to-notebooklm/">
+<link rel="icon" href="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Add to NotebookLM: free YouTube &amp; Web Importer for NotebookLM">
+<meta property="og:description" content="Free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM. No limits, no account, open source.">
+<meta property="og:url" content="https://andyshaman.github.io/add-to-notebooklm/">
+<meta property="og:image" content="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png">
+<meta property="og:site_name" content="AndyShaman">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Add to NotebookLM: YouTube & Web Importer",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome",
+  "softwareVersion": "1.3.1",
+  "url": "https://andyshaman.github.io/add-to-notebooklm/",
+  "downloadUrl": "https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope",
+  "description": "Free Chrome extension that adds web pages, YouTube videos, playlists, channels and comments to NotebookLM (Gemini Notebook) as sources, with bulk import and bulk delete. No limits, no account, open source.",
+  "license": "https://opensource.org/licenses/MIT",
+  "author": {"@type": "Person", "name": "AndyShaman", "url": "https://github.com/AndyShaman"},
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is Add to NotebookLM free?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every feature is free, with no premium tier and no ads."}},
+    {"@type": "Question", "name": "Does it have daily limits or quotas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. The extension itself sets no daily quotas on imports. NotebookLM's own limits on sources per notebook still apply."}},
+    {"@type": "Question", "name": "Do I need to create an account?",
+     "acceptedAnswer": {"@type": "Answer", "text": "No. You only need to be signed in to your Google account at notebook.google.com."}},
+    {"@type": "Question", "name": "Does it work with Gemini Notebook?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. It adds sources to your Google Notebook at notebook.google.com, the service known as NotebookLM and Gemini Notebook."}},
+    {"@type": "Question", "name": "Can it import YouTube playlists and channels?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. It imports single videos, whole playlists and channels as sources, for free."}},
+    {"@type": "Question", "name": "Is it open source?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. The source code is on GitHub at github.com/AndyShaman/add_to_NotebookLM under the MIT license."}},
+    {"@type": "Question", "name": "Does it send my data anywhere?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Only to your own Google Notebook. There are no third-party servers, no analytics and no telemetry."}}
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0b57d0;
+    --border: #d1d9e0; --soft: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #6cb6ff;
+      --border: #30363d; --soft: #161b22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main, footer { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header.top { display: flex; align-items: center; gap: 16px; margin-top: 40px; }
+  header.top img { width: 64px; height: 64px; flex: none; }
+  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0; }
+  h2 { font-size: 1.35rem; margin: 2.2em 0 0.5em; padding-top: 0.6em; border-top: 1px solid var(--border); }
+  h3 { font-size: 1.05rem; margin: 1.4em 0 0.3em; }
+  a { color: var(--link); }
+  .cta {
+    display: inline-block; margin: 0.4em 0 0.2em; padding: 10px 18px; border-radius: 8px;
+    background: var(--link); color: var(--bg); text-decoration: none; font-weight: 600;
+  }
+  .muted { color: var(--muted); }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 0.25em 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 1em 0; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--soft); }
+  .table-wrap { overflow-x: auto; }
+  code { background: var(--soft); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+  footer { margin-top: 48px; padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--border); font-size: 0.92rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<header class="top">
+  <img src="https://raw.githubusercontent.com/AndyShaman/add_to_NotebookLM/main/icons/icon128.png" alt="Add to NotebookLM icon" width="64" height="64">
+  <h1>Add to NotebookLM: YouTube &amp; Web Importer</h1>
+</header>
+
+<p>Add to NotebookLM is a Chrome extension that adds web pages and YouTube content (videos, playlists, channels and comments) to your Google Notebook (NotebookLM / Gemini Notebook) in one click, and lets you manage sources in bulk. It is free, with no limits, no premium tier, no account and no ads.</p>
+
+<p><a class="cta" href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Install from Chrome Web Store</a></p>
+<p class="muted">Version 1.3.1. Rated 5.0 in the Chrome Web Store. Open source under the MIT license.</p>
+
+<h2 id="what-it-does">What it does</h2>
+<ul>
+  <li>Adds the current page to any of your notebooks in one click.</li>
+  <li>Bulk import: paste a list of links, load them from an RSS or Atom feed, grab every link from the current page, or pick open browser tabs.</li>
+  <li>YouTube: imports single videos, whole playlists and channels as sources.</li>
+  <li>YouTube comments: imports the comments of a video as clean, structured text, useful for audience research.</li>
+  <li>Add page as PDF: captures the fully rendered page when a site imports poorly by link.</li>
+  <li>Bulk delete of sources inside a notebook.</li>
+  <li>Multiple Google accounts, English and Russian interface, dark theme.</li>
+</ul>
+
+<h2 id="why">Why people pick it</h2>
+<p>Every feature is free and there are no daily quotas. Importing YouTube playlists and channels, which some other importers offer only as a paid feature, is included at no cost. The extension can also turn the comments under a YouTube video into a notebook source, so you can ask NotebookLM what thousands of viewers said.</p>
+<ul>
+  <li>Unlimited imports, no daily quotas.</li>
+  <li>YouTube playlists and channels, free.</li>
+  <li>Import all open browser tabs, free.</li>
+  <li>Grab every link from any page in one click, free.</li>
+  <li>Import links from any RSS feed, free.</li>
+  <li>YouTube comments as a source.</li>
+  <li>Page-to-PDF capture for sites that import poorly as plain links.</li>
+</ul>
+
+<h2 id="import-youtube-playlist">How to import a YouTube playlist into NotebookLM</h2>
+<ol>
+  <li>Install <a href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Add to NotebookLM</a> from the Chrome Web Store and make sure you are signed in at notebook.google.com.</li>
+  <li>Open the playlist on YouTube.</li>
+  <li>Click the extension icon in the Chrome toolbar.</li>
+  <li>Choose the notebook to add to, or create a new one.</li>
+  <li>Click <strong>Add Playlist to Notebook</strong>. Each video in the playlist is added to the notebook as a separate source.</li>
+</ol>
+<p>Channels work the same way: open the channel page on YouTube and click <strong>Add Channel Videos to Notebook</strong>.</p>
+
+<h2 id="import-youtube-comments">How to import YouTube comments into NotebookLM</h2>
+<ol>
+  <li>Open the YouTube video whose comments you want to analyze.</li>
+  <li>Click the extension icon and choose the notebook.</li>
+  <li>Choose the parsing mode (top comments or all, newest first), the comment limit, and whether to load replies.</li>
+  <li>Click <strong>Parse Comments</strong>. The comments are added to the notebook as one structured text source.</li>
+  <li>Ask NotebookLM questions about the comments, for example what viewers liked or what they asked about.</li>
+</ol>
+
+<h2 id="bulk-import">How to import many links into NotebookLM at once (bulk, open tabs, RSS)</h2>
+<ol>
+  <li>Click the extension icon and open <strong>Bulk Import</strong>.</li>
+  <li>Choose where the links come from: paste a list of links, enter an RSS or Atom feed URL and click <strong>Load from RSS</strong>, or switch to <strong>Browser Tabs</strong> to pick open tabs.</li>
+  <li>To collect every link on the page you are viewing, click <strong>Grab all links from page</strong> in the popup instead.</li>
+  <li>Select the notebook.</li>
+  <li>Click <strong>Import Links</strong> or <strong>Import Selected Tabs</strong>. Each link is added as a separate source.</li>
+</ol>
+
+<h2 id="comparison">Comparison with other NotebookLM importers</h2>
+<p>Several Chrome extensions import content into NotebookLM. Some charge for playlist and channel import, and some cap how many imports you can make per day. Add to NotebookLM keeps all features free, sets no daily quotas, needs no account of its own, and adds YouTube comments import and page-to-PDF capture.</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Feature</th><th>Add to NotebookLM</th><th>Extensions that charge for playlist and channel import</th><th>Importers with daily quotas</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>YouTube playlists and channels</td><td>Free</td><td>Paid</td><td>Varies</td></tr>
+    <tr><td>Daily import limit</td><td>None</td><td>Varies</td><td>Yes</td></tr>
+    <tr><td>Import open tabs, page links, RSS feeds</td><td>Free</td><td>Varies</td><td>Varies</td></tr>
+    <tr><td>YouTube comments as a source</td><td>Yes</td><td>Varies</td><td>Varies</td></tr>
+    <tr><td>Page-to-PDF capture</td><td>Yes</td><td>Varies</td><td>Varies</td></tr>
+    <tr><td>Separate sign-up</td><td>Not required</td><td>Varies</td><td>Varies</td></tr>
+    <tr><td>Source code</td><td>Open, MIT</td><td>Varies</td><td>Varies</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="privacy">Privacy and how it works</h2>
+<p>The extension talks directly from your browser to your own Google Notebook. There are no third-party servers, no sign-up, and no analytics or telemetry. The source code is open under the MIT license on <a href="https://github.com/AndyShaman/add_to_NotebookLM">GitHub</a>, so you can check what it does. Details are in the <a href="https://andyshaman.github.io/add_to_NotebookLM/privacy-policy.html">privacy policy</a>.</p>
+
+<h3 id="add-as-pdf">About "Add as PDF"</h3>
+<p>PDF capture uses Chrome's debugger API to print the page you chose. During capture Chrome shows its standard "started debugging" notice as an infobar. This is expected, appears only during capture, and the extension uses only the single "page to PDF" command.</p>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>A Google account signed in to notebook.google.com.</li>
+  <li>Google Chrome or another Chromium-based browser.</li>
+</ul>
+
+<h2 id="faq">FAQ</h2>
+<h3>Is Add to NotebookLM free?</h3>
+<p>Yes. Every feature is free, with no premium tier and no ads.</p>
+<h3>Does it have daily limits or quotas?</h3>
+<p>No. The extension itself sets no daily quotas on imports. NotebookLM's own limits on sources per notebook still apply.</p>
+<h3>Do I need to create an account?</h3>
+<p>No. You only need to be signed in to your Google account at notebook.google.com.</p>
+<h3>Does it work with Gemini Notebook?</h3>
+<p>Yes. It adds sources to your Google Notebook at notebook.google.com, the service known as NotebookLM and Gemini Notebook.</p>
+<h3>Can it import YouTube playlists and channels?</h3>
+<p>Yes. It imports single videos, whole playlists and channels as sources, for free.</p>
+<h3>Is it open source?</h3>
+<p>Yes. The source code is on <a href="https://github.com/AndyShaman/add_to_NotebookLM">GitHub</a> under the MIT license.</p>
+<h3>Does it send my data anywhere?</h3>
+<p>Only to your own Google Notebook. There are no third-party servers, no analytics and no telemetry.</p>
+
+<h2 id="ru" lang="ru">Русский</h2>
+<div lang="ru">
+<p>Add to NotebookLM добавляет веб-страницы и контент YouTube в ваш Google Notebook (NotebookLM / Gemini Notebook) в один клик и позволяет управлять источниками массово. Всё бесплатно: без лимитов, без премиум-тарифа, без регистрации и рекламы. Расширение общается напрямую из вашего браузера с вашим же Google Notebook, без сторонних серверов, аналитики и телеметрии. Открытый код (MIT). <a href="https://chromewebstore.google.com/detail/pdkgjccfmjghjelcogecndopngnjhope">Установить из Chrome Web Store</a>.</p>
+<ul>
+  <li>Добавить текущую страницу в любой ноутбук одним кликом.</li>
+  <li>Массовый импорт: вставьте список ссылок, загрузите их из RSS/Atom-фида, соберите все ссылки с текущей страницы или выберите открытые вкладки.</li>
+  <li>YouTube: импорт видео, целых плейлистов и каналов.</li>
+  <li>Комментарии YouTube: импорт комментариев видео структурированным текстом для анализа аудитории.</li>
+  <li>Добавить страницу как PDF: захват полностью отрендеренной страницы, когда сайт плохо импортируется по ссылке.</li>
+  <li>Массовое удаление источников внутри ноутбука.</li>
+  <li>Несколько Google-аккаунтов, английский и русский интерфейс, тёмная тема.</li>
+</ul>
+</div>
+
+</main>
+<footer>
+  <p>Made by AndyShaman. <a href="https://github.com/AndyShaman">GitHub</a> · <a href="https://t.me/AI_Handler">Telegram channel</a> · <a href="https://www.youtube.com/channel/UCLkP6wuW_P2hnagdaZMBtCw">YouTube channel</a> · <a href="/">Other projects</a></p>
+  <p>NotebookLM and Gemini are trademarks of Google LLC. This is an independent project, not affiliated with or endorsed by Google.</p>
+</footer>
+</body>
+</html>
