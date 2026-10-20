@@ -3,43 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AndyShaman: projects</title>
-<meta name="description" content="Open source projects by AndyShaman: Chrome extensions, Claude Code tools, MCP servers and an app for BYD cars.">
+<meta name="color-scheme" content="light dark">
+<title>Andrey Shimanovich</title>
+<meta name="description" content="Andrey Shimanovich helps companies put LLMs and agents to work. Open-source Claude Code skills, a NotebookLM importer, Telegram agents, a BYD app.">
 <link rel="canonical" href="https://andyshaman.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Andrey Shimanovich">
+<meta property="og:description" content="I help companies put LLMs and agents to work, through hands-on consulting and training, and build open-source tools I use myself.">
+<meta property="og:url" content="https://andyshaman.github.io/">
+<meta property="og:image" content="https://andyshaman.github.io/img/andrey.jpg">
+<link rel="preload" href="fonts/pt-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Andrey Shimanovich",
+  "alternateName": "AndyShaman",
+  "jobTitle": "AI consultant",
+  "url": "https://andyshaman.github.io/",
+  "image": "https://andyshaman.github.io/img/andrey.jpg",
+  "sameAs": [
+    "https://github.com/AndyShaman",
+    "https://t.me/AI_Handler",
+    "https://www.youtube.com/channel/UCLkP6wuW_P2hnagdaZMBtCw"
+  ]
+}
+</script>
 <style>
-  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --link: #0b57d0; --border: #d1d9e0; }
+  @font-face { font-family: 'PT Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/pt-mono-400-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'PT Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/pt-mono-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'PT Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(fonts/pt-serif-400-italic-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'PT Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(fonts/pt-serif-400-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'PT Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/pt-serif-400-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'PT Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/pt-serif-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'PT Serif'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/pt-serif-700-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+  @font-face { font-family: 'PT Serif'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/pt-serif-700-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+  :root {
+    color-scheme: light dark;
+    --bg: #fcfcfa; --fg: #1b1b19; --muted: #6b6a65; --rule: #e6e5e0; --accent: #f1cc1d;
+    --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+    --mono: 'PT Mono', ui-monospace, Menlo, monospace;
+  }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --link: #6cb6ff; --border: #30363d; }
+    :root { --bg: #151514; --fg: #e9e7e2; --muted: #9b9890; --rule: #2a2a27; }
   }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 18px/1.6 var(--serif);
+    -webkit-text-size-adjust: 100%;
   }
-  main { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
-  h1 { font-size: 1.8rem; margin: 0 0 0.3em; }
-  a { color: var(--link); }
-  ul { padding-left: 1.2em; }
-  li { margin: 0.6em 0; }
-  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.92rem; color: var(--muted); }
+  main { max-width: 36rem; margin: 0 auto; padding: 96px 20px 64px; }
+  section + section, footer { margin-top: 64px; }
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+  a {
+    color: inherit;
+    text-decoration: underline 1px var(--accent);
+    text-underline-offset: 3px;
+  }
+  a:hover { text-decoration-color: currentColor; }
+  .photo { display: block; width: 80px; height: 80px; border-radius: 6px; margin-bottom: 24px; }
+  h1 { font-size: 28px; line-height: 1.15; font-weight: 700; margin: 0; }
+  .handle { margin: 4px 0 0; font-size: 15px; color: var(--muted); }
+  h2 { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+  h2:not(:first-child) { margin-top: 40px; }
+  .ledger {
+    list-style: none; margin: 0; padding: 0;
+  }
+  .ledger li {
+    display: grid; grid-template-columns: 11rem 1fr 3.5rem; column-gap: 20px;
+    align-items: baseline; padding: 12px 0;
+  }
+  .ledger li + li { border-top: 1px solid var(--rule); }
+  .name { font: 16px/1.5 var(--mono); }
+  .desc { font-size: 15px; line-height: 1.5; color: var(--muted); }
+  .stars {
+    font: 15px/1.5 var(--mono); color: var(--muted); text-align: right; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .star { color: var(--accent); }
+  footer { font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  @media (max-width: 600px) {
+    .ledger li {
+      grid-template-columns: 1fr auto; grid-template-areas: "name stars" "desc desc";
+      column-gap: 16px; row-gap: 2px;
+    }
+    .name { grid-area: name; }
+    .stars { grid-area: stars; }
+    .desc { grid-area: desc; }
+  }
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    main { padding-top: 48px; }
+    section + section, footer { margin-top: 48px; }
+  }
 </style>
 </head>
 <body>
 <main>
-<h1>AndyShaman</h1>
-<p>Open source tools for AI workflows, browsers and cars.</p>
-<ul>
-  <li><a href="/add-to-notebooklm/">Add to NotebookLM</a>: a free Chrome extension that imports web pages, YouTube videos, playlists, channels and comments into NotebookLM.</li>
-  <li><a href="https://github.com/AndyShaman/BYDMate">BYDMate</a>: an app for BYD DiLink head units with split screen, navigation on the instrument cluster, a trip and charging journal, and ABRP telemetry.</li>
-  <li><a href="https://github.com/AndyShaman/gemini-webapi-mcp">gemini-webapi-mcp</a>: an MCP server for Google Gemini that provides image generation, editing and chat through browser cookies, without API keys.</li>
-  <li><a href="https://github.com/AndyShaman/senior-fable">senior-fable</a>: tech-lead orchestration for Claude Code, where the top model keeps architecture and decisions while cheaper subagents do the routine work and the digging.</li>
-  <li><a href="https://github.com/AndyShaman/Soroka">Soroka</a>: a personal Telegram knowledge base: forward anything, search it from a chat, with an MCP server for Claude.</li>
-  <li><a href="https://github.com/AndyShaman/premortem">premortem</a>: a Claude Code skill that finds the concrete ways a plan could fail before you commit to it.</li>
-  <li><a href="https://github.com/AndyShaman/telegram-business-bridge">telegram-business-bridge</a>: connects an AI agent to your personal Telegram through the official Business API, with every reply waiting for your approval.</li>
-  <li><a href="https://github.com/AndyShaman/claude-statusline">claude-statusline</a>: a status line for Claude Code showing the model, context usage, usage limits, git branch and session time.</li>
-</ul>
-<footer>
-  <a href="https://github.com/AndyShaman">GitHub</a> · <a href="https://t.me/AI_Handler">Telegram channel</a> · <a href="https://www.youtube.com/channel/UCLkP6wuW_P2hnagdaZMBtCw">YouTube channel</a>
-</footer>
+  <section>
+    <img class="photo" src="img/andrey.jpg" width="80" height="80" alt="Andrey Shimanovich, smiling, in a black T-shirt with a yellow brain logo">
+    <h1>Andrey Shimanovich</h1>
+    <p class="handle">AndyShaman</p>
+  </section>
+
+  <section>
+    <p>I help companies put LLMs and agents to work, through hands-on consulting and training. The rest of the time I build open-source tools I use myself: Claude Code skills, a NotebookLM importer, Telegram agents, an app for my BYD. A fleet of personal AI agents runs my routine from a Mac mini and a VPS. I write about what actually works in <a href="https://t.me/AI_Handler" lang="ru">Дрессировщик нейросетей</a>, a Telegram channel with 8,700 readers, and on <a href="https://www.youtube.com/channel/UCLkP6wuW_P2hnagdaZMBtCw">YouTube</a>.</p>
+    <p lang="ru">По-русски: веду канал «Дрессировщик нейросетей» о внедрении нейросетей и агентов без воды и хайпа, консультирую компании и обучаю команды.</p>
+  </section>
+
+  <section>
+    <h2>Claude Code</h2>
+    <ul class="ledger">
+      <li><a class="name" href="https://github.com/AndyShaman/senior-fable">senior-fable</a><span class="desc">Tech-lead orchestration: the top model keeps the decisions, cheaper subagents do the routine and the digging.</span><span class="stars" data-repo="AndyShaman/senior-fable"><span class="star">★</span> 28</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/premortem">premortem</a><span class="desc">Finds the concrete ways a plan could fail before you commit to it.</span><span class="stars" data-repo="AndyShaman/premortem"><span class="star">★</span> 61</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/claude-statusline">claude-statusline</a><span class="desc">Status line with model, context bar, usage limits, git branch and session time.</span><span class="stars" data-repo="AndyShaman/claude-statusline"><span class="star">★</span> 34</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/lorebase">lorebase</a><span class="desc">Self-maintaining knowledge base: drop in sources, get a cross-linked wiki.</span><span class="stars" data-repo="AndyShaman/lorebase"><span class="star">★</span> 5</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/3x-ui-skill">3x-ui-skill</a><span class="desc">Deploys a VPN server on a fresh VPS end to end, from hardening to a subscription link.</span><span class="stars" data-repo="AndyShaman/3x-ui-skill"><span class="star">★</span> 58</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/vps-setup-skill">vps-setup-skill</a><span class="desc">Beginner-safe Linux VPS hardening; SSH lockdown only after key login is verified.</span><span class="stars" data-repo="AndyShaman/vps-setup-skill"><span class="star">★</span> 8</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/whisk-proxy">whisk-proxy</a><span class="desc">Generate images with Google Whisk straight from Claude Code.</span><span class="stars" data-repo="AndyShaman/whisk-proxy"><span class="star">★</span> 20</span></li>
+    </ul>
+    <h2>Browser</h2>
+    <ul class="ledger">
+      <li><a class="name" href="https://andyshaman.github.io/add-to-notebooklm/">Add to NotebookLM</a><span class="desc">Chrome extension: bulk-import YouTube playlists, comments and web pages into NotebookLM.</span><span class="stars" data-repo="AndyShaman/add_to_NotebookLM"><span class="star">★</span> 150</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/gemini-webapi-mcp">gemini-webapi-mcp</a><span class="desc">MCP server for Gemini through browser cookies: image generation, editing and chat without API keys.</span><span class="stars" data-repo="AndyShaman/gemini-webapi-mcp"><span class="star">★</span> 63</span></li>
+    </ul>
+    <h2>Telegram</h2>
+    <ul class="ledger">
+      <li><a class="name" href="https://github.com/AndyShaman/telegram-business-bridge">telegram-business-bridge</a><span class="desc">An AI agent on your personal Telegram via the Business API; every reply waits for your approval.</span><span class="stars" data-repo="AndyShaman/telegram-business-bridge"><span class="star">★</span> 18</span></li>
+      <li><a class="name" href="https://github.com/AndyShaman/Soroka">Soroka</a><span class="desc">Personal knowledge base in Telegram: forward anything, search it from a chat; MCP server for Claude.</span><span class="stars" data-repo="AndyShaman/Soroka"><span class="star">★</span> 13</span></li>
+    </ul>
+    <h2>Car</h2>
+    <ul class="ledger">
+      <li><a class="name" href="https://github.com/AndyShaman/BYDMate">BYDMate</a><span class="desc">Android app for BYD DiLink head units: split screen, navigation on the cluster, trip and charging journal, ABRP telemetry.</span><span class="stars" data-repo="AndyShaman/BYDMate"><span class="star">★</span> 427</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <p>Write to me on Telegram at <a href="https://t.me/AI_Handler">@AI_Handler</a> or by email at <a href="mailto:ai3059917@gmail.com">ai3059917@gmail.com</a>. Code is on <a href="https://github.com/AndyShaman">GitHub</a>, videos on <a href="https://www.youtube.com/channel/UCLkP6wuW_P2hnagdaZMBtCw">YouTube</a>.</p>
+  </section>
+
+  <footer>Updated October 2026</footer>
 </main>
 </body>
 </html>
